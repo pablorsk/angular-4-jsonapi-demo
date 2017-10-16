@@ -1,0 +1,16 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Date of birth</th>
+            <th>Date of dead</th>
+        </tr>
+    </thead>
+    <tr *ngFor="let author of authors.$toArray">
+        <td>{{ author.id }}</td>
+        <td>{{ author.attributes.name }}</td>
+        <td>{{ author.attributes.date_of_birth | date }}</td>
+        <td>{{ author.attributes.date_of_death | date }}</td>
+      </tr>
+</table>
